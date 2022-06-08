@@ -190,8 +190,14 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-  /*code here*/
+//Not Finished
+function getAverageWordLength(flavArr){
+  let totalWords = [];
+  for(let i = 0; i < flavArr.length; i++) {
+    //totalWords.push(flavArr[i].split(' '));
+  }
+  totalWords
+  return (totalWords / flavArr.length);
 }
 
 

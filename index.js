@@ -47,7 +47,7 @@ Use the copy function below to do the following:
 
 
 function copy(flavor){
-  return flavor;
+  return [...flavor];
 }
 
 
@@ -64,8 +64,8 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(arr){
-  return (arr.length === 31);
- }
+  return (arr.length === originalFlavors.length);
+
 
 
 
@@ -145,8 +145,6 @@ function removeFlavorByName(flavors, flavName){
   return flavors;
 }
 
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
 Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values that contain the received string. This would allow you to be able to filter for "Vanilla", "Sherbet", "Lemon" etc. when different holidays roll around by passing in those specific strings.
@@ -190,13 +188,15 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-//Not Finished
+
 function getAverageWordLength(flavArr){
   let totalWords = [];
+  let counter = 0;
   for(let i = 0; i < flavArr.length; i++) {
     totalWords.push(flavArr[i].split(' '));
+    counter = totalWords[i].length + counter;
   }
-  return (totalWords / flavArr.length);
+  console.log(counter / flavArr.length);
 }
 
 

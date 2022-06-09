@@ -68,7 +68,7 @@ function is31Flavors(arr){
 
 
 
-
+}
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -197,6 +197,7 @@ function getAverageWordLength(flavArr){
     counter = totalWords[i].length + counter;
   }
   console.log(counter / flavArr.length);
+  return counter / flavArr.length;
 }
 
 
@@ -213,8 +214,26 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
-  /*code here*/
+function getRandomFlavors(flavList0, flavList1, flavList2, flavList3) {
+  let randomFlavors = [];
+  let dice = 0;
+  for(let i = 0; randomFlavors.length < 31; i++) {
+    dice = Math.floor(Math.random() * 4) + 1;
+    if(dice === 1) {
+      randomFlavors.push(flavList0[Math.floor(Math.random() * (flavList0.length + 1))]);
+    } else if(dice === 2) {
+      randomFlavors.push(flavList1[Math.floor(Math.random() * (flavList1.length + 1))]);
+    } else if(dice === 3) {
+      randomFlavors.push(flavList2[Math.floor(Math.random() * (flavList2.length + 1))]);
+    } else if(dice === 4) {
+      randomFlavors.push(flavList3[Math.floor(Math.random() * (flavList3.length + 1))]);
+    } else {
+      return 'There is a problem with this code.';
+    }
+  } 
+  console.log(randomFlavors);
+  console.log(randomFlavors.length);
+  return randomFlavors;
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
